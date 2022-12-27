@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "ingot_fly",
+  "version": "${version}",
+  "name": "IngotFly",
+  "description": "In survival mode you can fly but you need to spend some ingots",
+  "authors": [
+    "YouM"
+  ],
+  "contact": {
+    "website": "www.minept.top",
+    "repo": "https://github.com/YOM667/IngotFly"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "top.mpt.ingotfly.ingotfly.IngotFly"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.12",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}
