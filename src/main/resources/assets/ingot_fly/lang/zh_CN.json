@@ -1,4 +1,6 @@
 {
-  "key.ingot.gui": "打开 ingotFly 界面",
-  "gui.ingot.title": "ingotFly 界面"
+  "key.ingot_fly.gui": "打开 ingotFly 界面",
+  "gui.ingot_fly.title": "ingotFly 界面",
+  "text.ingot_fly.message": "花费一个锭获取",
+  "text.ingot_fly.time": "秒"
 }

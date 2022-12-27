@@ -1,4 +1,6 @@
 {
-  "key.ingot.gui": "open ingotFly GUI",
-  "gui.ingot.title": "ingotFly GUI"
+  "key.ingot_fly.gui": "open ingotFly GUI",
+  "gui.ingot_fly.title": "ingotFly GUI",
+  "text.ingot_fly.message": "spend a ingot to get",
+  "text.ingot_fly.time": "second"
 }
