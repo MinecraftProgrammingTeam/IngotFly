@@ -16,9 +16,9 @@ import top.mpt.ingotfly.ingotfly.gui.IngotFlyGuiScreen;
 public class IngotFly implements ModInitializer {
     private final KeyBinding showGUI = KeyBindingHelper.registerKeyBinding(
             new KeyBinding(
-                "key.ingot_fly.gui",
+                "key.ingot.gui",
                 InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_F,
+                GLFW.GLFW_KEY_H,
                 KeyBinding.MISC_CATEGORY
             )
     );
