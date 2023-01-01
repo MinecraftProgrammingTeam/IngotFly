@@ -1,10 +1,9 @@
-package top.mpt.ingotfly.ingotfly;
+package top.mpt.ingotfly;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
@@ -20,7 +19,7 @@ public class IngotFlyGuiScreen extends Screen {
     private static final Identifier BACKGROUND_TEXTURE = new Identifier("textures/gui/advancements/window.png");
 
     public IngotFlyGuiScreen() {
-        super(Text.translatable("gui.ingot_fly.title"));
+        super(Text.translatable("IngotFly 界面"));
     }
 
     @Override
@@ -37,7 +36,7 @@ public class IngotFlyGuiScreen extends Screen {
         int yOffset = 0;
         for(Map.Entry<ItemStack,Long> entry : IngotFly.itemMap.entrySet()){
             this.itemRenderer.renderGuiItemIcon(entry.getKey(), xPos + 15 + xOffset, yPos + 15 + yOffset);
-            MutableText text = Text.translatable("text.ingot_fly.message").append(" ["+entry.getValue().toString()+"] ").append(Text.translatable("text.ingot_fly.time"));
+            String text = "花费一个锭获取" + " ["+entry.getValue().toString()+"] " + "秒";
             this.textRenderer.draw(matrices,entry.getKey().getName(), xPos + 30 + xOffset,yPos+20+yOffset,new Color(255,0,0).getRGB());
             this.textRenderer.draw(matrices,text, xPos + 15 + xOffset,yPos+ 35 +yOffset,new Color(-1).getRGB());
             xOffset += 125;

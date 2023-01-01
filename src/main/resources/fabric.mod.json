@@ -15,7 +15,7 @@
   "environment": "client",
   "entrypoints": {
     "main": [
-      "top.mpt.ingotfly.ingotfly.IngotFly"
+      "top.mpt.ingotfly.IngotFly"
     ]
   },
   "depends": {

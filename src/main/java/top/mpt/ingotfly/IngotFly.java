@@ -1,4 +1,4 @@
-package top.mpt.ingotfly.ingotfly;
+package top.mpt.ingotfly;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -42,7 +42,7 @@ public class IngotFly implements ModInitializer {
     //按键绑定 默认绑定在H键 可以自行更改
     private final KeyBinding showGUI = KeyBindingHelper.registerKeyBinding(
             new KeyBinding(
-                "key.ingot_fly.gui",
+                "打开 IngotFly 界面",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_H,
                 KeyBinding.MISC_CATEGORY
@@ -91,15 +91,17 @@ public class IngotFly implements ModInitializer {
                             world.playSound(null, player.getBlockPos(), SoundEvents.ENTITY_PLAYER_LEVELUP, SoundCategory.MUSIC, 1f, 1f);
                             //允许玩家飞行
                             player.getAbilities().allowFlying = true;
-                            Util.sendMessage("chat.text.capability");
+                            Util.sendMessage("换取成功！您的飞行时间还剩"+entry.getValue()+"秒~");
                             //计时器开始计时
                             TimeTask task = new TimeTask(entry.getValue(), player);
                             new Timer().schedule(task, 0, 1000);
                         } else {
-                            Util.sendMessage("chat.text.flying");
+                            Util.sendMessage("玩家已经在飞行或可以飞行，无法再次使用道具!");
                         }
                     }
                 }
+            }else {
+                Util.sendMessage("无法在当前模式下使用");
             }
             return TypedActionResult.pass(ItemStack.EMPTY);
         });

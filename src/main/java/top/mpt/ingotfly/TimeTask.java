@@ -1,4 +1,4 @@
-package top.mpt.ingotfly.ingotfly;
+package top.mpt.ingotfly;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
@@ -20,10 +20,10 @@ public class TimeTask extends TimerTask {
     @Override
     public void run() {
         if(time<=3L) {
-            Util.sendSuccessiveMessage("chat.text.fall"," " + time + " ","text.ingot_fly.time");
+            Util.sendMessage("快降落！飞行时间快到了！还剩" + time + "秒");
         }
         if(time == 0L) {
-            Util.sendMessage(Text.translatable("chat.text.end"));
+            Util.sendMessage(Text.translatable("飞行时间结束"));
             player.getAbilities().allowFlying = false;
             player.getAbilities().flying = false;
             this.cancel();
