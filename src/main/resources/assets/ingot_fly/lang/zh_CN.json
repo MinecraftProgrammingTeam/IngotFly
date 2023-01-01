@@ -1,6 +1,10 @@
 {
-  "key.ingot_fly.gui": "打开 ingotFly 界面",
-  "gui.ingot_fly.title": "ingotFly 界面",
+  "key.ingot_fly.gui": "打开 IngotFly 界面",
+  "gui.ingot_fly.title": "IngotFly 界面",
   "text.ingot_fly.message": "花费一个锭获取",
-  "text.ingot_fly.time": "秒"
+  "text.ingot_fly.time": "秒",
+  "chat.text.fall": "快降落！飞行时间快到了！还剩",
+  "chat.text.end": "飞行时间结束",
+  "chat.text.flying": "玩家已经在飞行或可以飞行，无法再次使用道具!",
+  "chat.text.capability": "获取飞行能力成功"
 }

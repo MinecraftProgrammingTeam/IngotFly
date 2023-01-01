@@ -2,5 +2,9 @@
   "key.ingot_fly.gui": "open ingotFly GUI",
   "gui.ingot_fly.title": "ingotFly GUI",
   "text.ingot_fly.message": "spend a ingot to get",
-  "text.ingot_fly.time": "second"
+  "text.ingot_fly.time": "second",
+  "chat.text.fall": "Come down! Flight time is coming! Remaining",
+  "chat.text.end": "End of flight time",
+  "chat.text.flying": "The player is already flying or can fly, and cannot use the prop again!",
+  "chat.text.capability": "Successfully acquired flight capability"
 }

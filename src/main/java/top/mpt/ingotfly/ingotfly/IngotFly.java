@@ -91,11 +91,12 @@ public class IngotFly implements ModInitializer {
                             world.playSound(null, player.getBlockPos(), SoundEvents.ENTITY_PLAYER_LEVELUP, SoundCategory.MUSIC, 1f, 1f);
                             //允许玩家飞行
                             player.getAbilities().allowFlying = true;
+                            Util.sendMessage("chat.text.capability");
                             //计时器开始计时
                             TimeTask task = new TimeTask(entry.getValue(), player);
                             new Timer().schedule(task, 0, 1000);
                         } else {
-                            Util.sendMessage("玩家已经在飞行或可以飞行，无法再次使用道具!");
+                            Util.sendMessage("chat.text.flying");
                         }
                     }
                 }
